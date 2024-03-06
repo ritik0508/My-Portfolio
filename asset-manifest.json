@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/My-Portfolio/static/css/main.c5bf787d.css",
+    "main.js": "/My-Portfolio/static/js/main.0af7fdbf.js",
+    "static/js/453.ace21015.chunk.js": "/My-Portfolio/static/js/453.ace21015.chunk.js",
+    "static/media/home-img.png": "/My-Portfolio/static/media/home-img.9c35c3b129cd5413c399.png",
+    "static/media/vstudio.png": "/My-Portfolio/static/media/vstudio.870638c9fd46b7277cb3.png",
+    "static/media/Resume_Ritik.pdf": "/My-Portfolio/static/media/Resume_Ritik.72e3bf9ba990b621636d.pdf",
+    "static/media/html.png": "/My-Portfolio/static/media/html.413aea80b1dd6a748842.png",
+    "static/media/react.png": "/My-Portfolio/static/media/react.20adfb35ae6a6e5817bf.png",
+    "static/media/javascript.png": "/My-Portfolio/static/media/javascript.1707d09a3f6f31bb97e8.png",
+    "static/media/Bootstrap.png": "/My-Portfolio/static/media/Bootstrap.02b89671c6e5e5e5da0c.png",
+    "static/media/css.png": "/My-Portfolio/static/media/css.cb9c848d75f30818e73c.png",
+    "static/media/postman.png": "/My-Portfolio/static/media/postman.bdbd633e185bcfb67540.png",
+    "index.html": "/My-Portfolio/index.html",
+    "main.c5bf787d.css.map": "/My-Portfolio/static/css/main.c5bf787d.css.map",
+    "main.0af7fdbf.js.map": "/My-Portfolio/static/js/main.0af7fdbf.js.map",
+    "453.ace21015.chunk.js.map": "/My-Portfolio/static/js/453.ace21015.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5bf787d.css",
+    "static/js/main.0af7fdbf.js"
+  ]
+}
