@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Nunito:wght@300&display=swap');
+
+body{
+    background-color: #1F2024;
+}
+.navbar-brand{
+    font-weight: bold;
+}
+@media (min-width: 992px) {
+    .navbar{
+        min-height: 100vh;
+        width: 240px;
+        background-color: black;
+    }
+}

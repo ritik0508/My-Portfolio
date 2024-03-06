@@ -1,0 +1,42 @@
+#mainCont {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 130px;
+}
+.pge-title4 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #0ef;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.card {
+  background: #11141a !important;
+  margin-bottom: 20px;
+  height: auto;
+}
+.Link {
+  color: #0ef !important;
+  text-decoration: none;
+}
+.Link:visited {
+  color: #0ef !important;
+}
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pge-title4 {
+    font-weight: 900;
+  }
+}

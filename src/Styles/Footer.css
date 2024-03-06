@@ -1,0 +1,21 @@
+.par-Icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.Icons {
+  color: white;
+  font-size: "30px";
+  text-align: center;
+  cursor: pointer;
+}
+.Icons:hover {
+  color: #0ef;
+}
+.cpyright {
+  font-size: 12px;
+  font-family: "Poppins, sans-serif";
+  font-weight: 600;
+  color: white;
+}

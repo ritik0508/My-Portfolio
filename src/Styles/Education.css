@@ -1,0 +1,23 @@
+.pge-title3 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #0ef;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.eduCard {
+  background: #11141a !important;
+  margin-bottom: 20px;
+  height: auto;
+}
+.edu-Subpoints {
+  color: white;
+}
+.firstWord {
+  color: #0ef;
+}
+@media screen and (max-width: 480px) {
+  .pge-title3 {
+    font-weight: 900;
+  }
+}

@@ -1,0 +1,82 @@
+.pge-title5 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #0ef;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.subTitle {
+  color: #0ef;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mainCont {
+  background: #11141a !important;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cnt-info {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-bottom: 15px;
+}
+.cnt-info span {
+  margin-left: 10px;
+}
+
+.rightCont {
+  background: #1f242d !important;
+  padding: 10px;
+  color: #fff !important;
+  flex: 1;
+}
+
+.Btn {
+  color: #0ef !important;
+  border-color: #0ef !important;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Btn:hover {
+  background: #11141a !important;
+}
+
+.css-1v6a0cm-MuiInputBase-root-MuiInput-root::after {
+  border-bottom: 2px solid #0ef !important;
+}
+
+.css-6p5119-MuiInputBase-root-MuiInput-root::after {
+  border-bottom: 2px solid #0ef !important;
+}
+
+.Toastify__toast-theme--dark {
+  background: #11141a !important ;
+}
+
+@media screen and (max-width: 780px) {
+  .rightCont {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pge-title5 {
+    font-weight: 900;
+    font-size: 40px;
+  }
+  .subTitle {
+    font-weight: 900;
+  }
+
+  .subCont,
+  .rightCont {
+    flex: 1 100%;
+    padding: 15px;
+  }
+}
