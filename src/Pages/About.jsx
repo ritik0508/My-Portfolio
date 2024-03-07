@@ -1,9 +1,16 @@
 import React from "react";
 import "../Styles/About.css";
+import { useEffect } from "react";
 import Card from "@mui/material/Card";
 import { Container, Typography, Box } from "@mui/material";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const About = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
     <>
       <Box className="pge-title1">About Me</Box>
@@ -11,7 +18,7 @@ const About = () => {
         className="main-Cont"
         sx={{ marginBottom: "130px", textAlign: "justify" }}
       >
-        <Card sx={{ background: "#11141a", color: "#fff", padding: "30px" }}>
+        <Card sx={{ background: "#11141a", color: "#fff", padding: "30px" }} data-aos="flip-up">
           <Typography
             className="paras"
             sx={{
@@ -19,7 +26,8 @@ const About = () => {
               lineHeight: "30px",
               paddingBottom: "20px",
             }}
-          >
+            >
+          
             Hey there! I'm Ritik Sharma, a recent Master's graduate in Computer
             Application, originally from Digras, Yavatmal, and currently based
             in Pune. I hold a Bachelor's degree in Computer Application from
@@ -33,7 +41,8 @@ const About = () => {
               lineHeight: "30px",
               paddingBottom: "20px",
             }}
-          >
+            >
+          
             I'm deeply passionate about front-end development and love creating
             captivating user experiences. Proficient in HTML5, CSS3, Bootstrap,
             and Material UI, I pride myself on bringing creativity and precision
@@ -48,8 +57,8 @@ const About = () => {
               fontSize: "20px",
               lineHeight: "30px",
               paddingBottom: "20px",
-            }}
-          >
+            }}>
+          
             Eager to contribute my skills and enthusiasm to innovative projects,
             and make a real impact. I'm enthusiastic about the opportunity to
             collaborate with your organization and contribute to its success.

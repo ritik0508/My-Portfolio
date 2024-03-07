@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "../Styles/Home.css";
 import Typewriter from "typewriter-effect";
 import HomeImg from "../assets/home-img.png";
 import Button from "@mui/material/Button";
 import Resume from "../assets/Resume_Ritik.pdf";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const Home = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   const [state] = useState({
     title: "Hello,",
     titleTwo: "I'm",
@@ -13,8 +19,9 @@ const Home = () => {
   });
 
   return (
-    <section className="home">
-      <div className="home-intro">
+    <section
+      className="home">
+      <div className="home-intro" data-aos="fade-right">
         <span className="titleOne">{state.title}</span>
         <span className="titleTwo">{state.titleTwo}</span>
         <span className="titleThree">{state.titleThree}</span>
@@ -34,7 +41,7 @@ const Home = () => {
           </Button>
         </a>
       </div>
-      <img className="code-image" src={HomeImg} alt="codeimage" />
+      <img className="code-image" src={HomeImg} alt="codeimage" data-aos="fade-left" />
     </section>
   );
 };

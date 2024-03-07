@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link as ScrollLink } from "react-scroll";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -21,52 +21,32 @@ import XIcon from "@mui/icons-material/X";
 const drawerWidth = 220;
 const navItems = [
   { name: "HOME", id: "home", path: "/" },
-  { name: "ABOUT", id: "about", path: "/About" },
-  { name: "EDUCATION", id: "education", path: "/Education" },
-  { name: "SKILLS", id: "skills", path: "/Skills" },
-  { name: "CONTACT", id: "contact", path: "/Contact" },
+  { name: "ABOUT", id: "about", path: "/about" },
+  { name: "EDUCATION", id: "education", path: "/education" },
+  { name: "SKILLS", id: "skills", path: "/skills" },
+  { name: "CONTACT", id: "contact", path: "/contact" },
 ];
 
 function Header(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = navItems.map((item) => item.id);
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = document.getElementById(sections[i]);
-        if (section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
-        }
-      }
-    };
-
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", handleScroll);
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }
-  }, [window]);
+    console.log("Header component mounted");
+    document.documentElement.scrollTop = 0;
+  }, [location.pathname]);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
 
   const closeDrawer = () => {
-    setMobileOpen(!mobileOpen);
+    setMobileOpen(true);
   };
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   const drawer = (
@@ -100,29 +80,17 @@ function Header(props) {
                 paddingTop: "20px",
               }}
             >
-              <ScrollLink
-                key={item.id}
-                to={item.id}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={900}
-                activeClass="active"
-                onSetActive={() => setActiveSection(item.id)}
-              >
+              <Link to={item.path} style={{ textDecoration: "none" }}>
                 <ListItemButton
                   sx={{
-                    color: activeSection === item.id ? "#0ef" : "#fff",
+                    color: isActive(item.path) ? "#0ef" : "#fff",
                   }}
                   key={item.id}
-                  onClick={() => {
-                    scrollToSection(item.id);
-                    closeDrawer();
-                  }}
+                  onClick={closeDrawer}
                 >
                   <ListItemText primary={item.name} />
                 </ListItemButton>
-              </ScrollLink>
+              </Link>
             </ListItem>
           );
         })}
@@ -245,15 +213,10 @@ function Header(props) {
           <Box sx={{ flex: "0.4" }}>
             <Box sx={{ display: { xs: "none", sm: "flex" } }}>
               {navItems.map((item) => (
-                <ScrollLink
+                <Link
                   key={item.id}
-                  to={item.id}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={900}
-                  activeClass="active"
-                  onSetActive={() => setActiveSection(item.id)}
+                  to={item.path}
+                  style={{ textDecoration: "none" }}
                 >
                   <Button
                     sx={{
@@ -261,12 +224,12 @@ function Header(props) {
                       fontWeight: "300",
                       padding: "0px 25px",
                       // eslint-disable-next-line no-dupe-keys
-                      color: activeSection === item.id ? "#0ef" : "#fff",
+                      color: isActive(item.path) ? "#0ef" : "#fff",
                     }}
                   >
                     {item.name}
                   </Button>
-                </ScrollLink>
+                </Link>
               ))}
             </Box>
           </Box>

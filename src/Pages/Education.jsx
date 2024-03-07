@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/Education.css";
+import { useEffect } from "react";
 import { Container, Typography } from "@mui/material";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -8,10 +9,15 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Card from "@mui/material/Card";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 import TimelineOppositeContent, {
   timelineOppositeContentClasses,
 } from "@mui/lab/TimelineOppositeContent";
 const Education = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
     <>
       <div className="pge-title3">Education</div>
@@ -32,7 +38,7 @@ const Education = () => {
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent data-aos="fade-up-right" data-aos-delay="300">
               <Card className="eduCard" sx={{ maxWidth: 700, padding: "20px" }}>
                 <Typography
                   sx={{
@@ -65,7 +71,7 @@ const Education = () => {
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent data-aos="fade-up-left" data-aos-delay="300">
               <Card className="eduCard" sx={{ maxWidth: 700, padding: "20px" }}>
                 <Typography
                   sx={{
@@ -98,7 +104,7 @@ const Education = () => {
               <TimelineDot />
               <TimelineConnector />
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent data-aos="fade-up-left" data-aos-delay="300">
               <Card className="eduCard" sx={{ maxWidth: 700, padding: "20px" }}>
                 <Typography
                   sx={{
@@ -130,7 +136,7 @@ const Education = () => {
             <TimelineSeparator>
               <TimelineDot />
             </TimelineSeparator>
-            <TimelineContent>
+            <TimelineContent data-aos="fade-up-left" data-aos-delay="300">
               <Card className="eduCard" sx={{ maxWidth: 700, padding: "20px" }}>
                 <Typography
                   sx={{

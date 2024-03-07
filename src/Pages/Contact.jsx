@@ -7,13 +7,19 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Input from "@mui/material/Input";
 import Button from "@mui/material/Button";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const ariaLabel = { "aria-label": "description" };
 const Contact = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -101,7 +107,7 @@ const Contact = () => {
       <p className="subTitle">GET IN TOUCH</p>
 
       <Container sx={{ marginTop: "40px" }}>
-        <Card className="mainCont">
+        <Card className="mainCont" data-aos="zoom-out-up">
           <Box
             sx={{
               background: "#1f242d",
@@ -110,8 +116,9 @@ const Contact = () => {
               margin: "40px",
               width: "auto",
             }}
+            data-aos="zoom-out-right"
           >
-            <div className="cnt-info">
+            <div className="cnt-info" >
               <CallIcon sx={{ color: "#0ef", verticalAlign: "middle" }} />
               <span>+918329755037</span>
             </div>
@@ -132,6 +139,7 @@ const Contact = () => {
               width: "auto",
               padding: "20px",
             }}
+            data-aos="zoom-out-left"
           >
             <form onSubmit={handleSubmit}>
               <Input

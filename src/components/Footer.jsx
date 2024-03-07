@@ -1,15 +1,22 @@
 import React from "react";
 import "../Styles/Footer.css";
+import { useEffect } from "react";
 import { Typography, Box } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import EmailIcon from "@mui/icons-material/Email";
 import XIcon from "@mui/icons-material/X";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 const Footer = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
   return (
     <footer
-      style={{ background: "#11141a", marginTop: "50px", height: "200px" }}
+      style={{ background: "#11141a", marginTop: "50px",width:"100%",height:"auto"}}
+      data-aos="zoom-in-up"
     >
       <Typography
         sx={{
