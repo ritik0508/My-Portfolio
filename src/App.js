@@ -16,7 +16,7 @@ const App = () => {
       <Header />
       <AnimatePresence mode="wait">
       <Routes>
-        <Route path="/" index element={<Home/>} />
+        <Route exact path="/My-Portfolio" element={<Home/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/education" element={<Education/>} />
         <Route path="/skills" element={<Skills/>} />
