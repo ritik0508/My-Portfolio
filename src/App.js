@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header.jsx";
 import Home from "./Pages/Home.jsx";
@@ -12,7 +12,7 @@ import { AnimatePresence } from "framer-motion";
 const App = () => {
   return (
     <div>
-    <Router>
+    <BrowserRouter basename="/My-Portfolio">
       <Header />
       <AnimatePresence mode="wait">
       <Routes>
@@ -24,7 +24,7 @@ const App = () => {
       </Routes>
       </AnimatePresence>
       <Footer />
-      </Router>
+      </BrowserRouter>
     </div>
   );
 };
