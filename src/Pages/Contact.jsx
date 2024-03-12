@@ -188,9 +188,11 @@ const Contact = () => {
                 Send
               </Button>
             </form>
+            </Box>
+            </Card>
             <ToastContainer
               className="toast-container"
-              position="bottom-right"
+              position="top-right"
               autoClose={5000}
               hideProgressBar={false}
               newestOnTop={false}
@@ -200,8 +202,6 @@ const Contact = () => {
               draggable
               pauseOnHover
             />
-          </Box>
-        </Card>
       </Container>
     </>
   );
