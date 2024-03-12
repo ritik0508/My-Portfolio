@@ -12,7 +12,7 @@ import { AnimatePresence } from "framer-motion";
 const App = () => {
   return (
     <div>
-    <BrowserRouter>
+    <BrowserRouter basename="/My-Portfolio">
       <Header />
       <AnimatePresence mode="wait">
       <Routes>
