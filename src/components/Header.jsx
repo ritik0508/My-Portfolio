@@ -20,7 +20,7 @@ import XIcon from "@mui/icons-material/X";
 
 const drawerWidth = 220;
 const navItems = [
-  { name: "HOME", id: "home", path: "/My-Portfolio" },
+  { name: "HOME", id: "home", path: "/" },
   { name: "ABOUT", id: "about", path: "/about" },
   { name: "EDUCATION", id: "education", path: "/education" },
   { name: "SKILLS", id: "skills", path: "/skills" },
